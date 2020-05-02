@@ -20,10 +20,12 @@ class DeepDiveStateWise extends Component {
     }
 
     renderCharts = () => {
-        const { confirmed } = this.props.CovoidStoreStateWise;
+        const { confirmed , recovered, deceased } = this.props.CovoidStoreStateWise;
         return (
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-                <LineChartStateWiseCom timeSeries={confirmed} title='DAILY CASES STATE WISE' />
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' , justifyContent:'center'}}>
+                <LineChartStateWiseCom timeSeries={confirmed} title='DAILY CONFIRMED CASES STATE WISE' />
+                <LineChartStateWiseCom timeSeries={recovered} title='DAILY RECOVERED CASES STATE WISE' />
+                <LineChartStateWiseCom timeSeries={deceased} title='DAILY DECEASED CASES STATE WISE' />
             </div>
         )
     }

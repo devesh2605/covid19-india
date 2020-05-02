@@ -11,11 +11,11 @@ const LineChartStateWiseCom = (props) => {
                 <p style={{fontWeight:'bold', color:'#6c757d'}}>{title}</p>
             </div>
             <LineChart
-                width={window.innerWidth - 100}
-                height={600}
+                width={500}
+                height={300}
                 data={timeSeries}
                 margin={{
-                    top: 5, right: 80, left: 80, bottom: 20,
+                    top: 5, right: 20, left: 20, bottom: 20,
                 }}
             >
                 <XAxis dataKey="date" />
